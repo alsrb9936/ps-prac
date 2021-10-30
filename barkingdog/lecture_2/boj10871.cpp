@@ -11,5 +11,4 @@ int main(){
         cin >> a;
         if(a<N) cout << a << ' ';
     }
-
 }
