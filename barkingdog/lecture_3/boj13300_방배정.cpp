@@ -8,9 +8,8 @@ int woman[7];
 int Allocate_Room(int K){
     int cnt = 0;
     for(int i=0;i<7;i++){
-        if(man[i]/K > 0) cnt += man[i]/K;
+        cnt += man[i]/K + woman[i]/K;
         if(man[i]%K > 0) cnt += 1;
-        if(woman[i]/K > 0) cnt += woman[i]/K;
         if(woman[i]%K > 0) cnt += 1;
     }
 
