@@ -26,7 +26,7 @@ void erase(int addr){
     if(nxt[addr]!= -1) pre[nxt[addr]] = pre[addr];
     len--;
 }
-void traverse(void){ //모든 연결리스트 출력
+void traversal(void){ //모든 연결리스트 출력
     int cur = nxt[0];
     while(cur != -1){
         cout << dat[cur] << ' ';
@@ -37,27 +37,27 @@ void traverse(void){ //모든 연결리스트 출력
 void insert_test(){
   cout << "****** insert_test *****\n";
   insert(0, 10); // 10(address=1)
-  traverse();
+  traversal();
   insert(0, 30); // 30(address=2) 10
-  traverse();
+  traversal();
   insert(2, 40); // 30 40(address=3) 10
-  traverse();
+  traversal();
   insert(1, 20); // 30 40 10 20(address=4)
-  traverse();
+  traversal();
   insert(4, 70); // 30 40 10 20 70(address=5)
-  traverse();
+  traversal();
 }
 
 void erase_test(){
   cout << "****** erase_test *****\n";
   erase(1); // 30 40 20 70
-  traverse();
+  traversal();
   erase(2); // 40 20 70
-  traverse();
+  traversal();
   erase(4); // 40 70
-  traverse();
+  traversal();
   erase(5); // 40
-  traverse();
+  traversal();
 }
 
 int main(void){
